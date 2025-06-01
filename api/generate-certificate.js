@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     },
     body: JSON.stringify({
       document: {
-        document_template_id:: "b79ce507-21fc-4955-9cdb-88b3fdd79cf9", 
+        document_template_id: "b79ce507-21fc-4955-9cdb-88b3fdd79cf9", 
         payload: {
           name: user,
           course: course,
