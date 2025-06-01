@@ -27,8 +27,9 @@ export default async function handler(req, res) {
 
   const result = await response.json();
 
-  if (result.document && result.document.download_url) {
-    return res.redirect(result.document.download_url); // Opens PDF directly
+  // ✅ Redirect to preview_url if available
+  if (result.document && result.document.preview_url) {
+    return res.redirect(result.document.preview_url);
   } else {
     return res.status(500).json({ error: "Failed to generate document", details: result });
   }
